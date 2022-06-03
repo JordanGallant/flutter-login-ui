@@ -45,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
                     maxLines: 1,
                     decoration: InputDecoration(
                       hintText: 'Enter your email',
-                      prefixIcon  : const Icon(Icons.email),
+                      prefixIcon: const Icon(Icons.email),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -89,6 +89,13 @@ class _LoginPageState extends State<LoginPage> {
                   ElevatedButton(
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {}
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const RegisterPage(title: 'Register UI'),
+                        ),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(40, 15, 40, 15),
