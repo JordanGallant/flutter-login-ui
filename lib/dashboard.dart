@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:login_ui/home_page.dart';
 import 'package:login_ui/user-edit_screen.dart';
+import 'home_page.dart';
 import 'user-edit_screen.dart';
+import 'login_screen.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key, required this.title}) : super(key: key);
@@ -12,7 +14,7 @@ class Dashboard extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Dashboard'),
-        backgroundColor: Color.fromARGB(255, 187, 134, 252),
+        backgroundColor: const Color.fromARGB(255, 187, 134, 252),
       ),
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
@@ -29,11 +31,22 @@ class Dashboard extends StatelessWidget {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const HomePage(title: 'EditUser'),
+                    builder: (context) => const HomePage(title: 'Home Page'),
                   ),
                 );
               },
-            )
+            ),
+            ElevatedButton(
+              child: const Text('Edit User'),
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const UserEdit(title: 'EditUser'),
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),
