@@ -19,7 +19,7 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Register'),
-        backgroundColor: Color.fromARGB(255, 187, 134, 252),
+        backgroundColor: const Color.fromARGB(255, 187, 134, 252),
       ),
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Container(

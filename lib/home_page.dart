@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'user-edit_screen.dart';
+import 'package:login_ui/dashboard.dart';
+import 'dashboard.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key, required this.title}) : super(key: key);
@@ -10,7 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
-        backgroundColor: Color.fromARGB(255, 187, 134, 252),
+        backgroundColor: const Color.fromARGB(255, 187, 134, 252),
       ),
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
@@ -22,12 +23,12 @@ class HomePage extends StatelessWidget {
               style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
             ),
             ElevatedButton(
-              child: const Text('Edit User'),
+              child: const Text('Back to Dashboard'),
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const UserEdit(title: 'Edit user'),
+                    builder: (context) => const Dashboard(title: 'DashBoard'),
                   ),
                 );
               },

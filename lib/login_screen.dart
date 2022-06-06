@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Sign in'),
-        backgroundColor: Color.fromARGB(255, 187, 134, 252),
+        backgroundColor: const Color.fromARGB(255, 187, 134, 252),
       ),
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Container(

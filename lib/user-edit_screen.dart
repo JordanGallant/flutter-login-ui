@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_ui/dashboard.dart';
+import 'login_screen.dart';
 
 class UserEdit extends StatelessWidget {
   const UserEdit({Key? key, required this.title}) : super(key: key);
@@ -10,7 +11,7 @@ class UserEdit extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Edit User'),
-        backgroundColor: Color.fromARGB(255, 187, 134, 252),
+        backgroundColor: const Color.fromARGB(255, 187, 134, 252),
       ),
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
@@ -29,6 +30,17 @@ class UserEdit extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) =>
                         const Dashboard(title: 'Back to Dashbord'),
+                  ),
+                );
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Log out'),
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LoginPage(title: 'Login'),
                   ),
                 );
               },
